@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:pokemon_app/domain/entities/pokemon.dart';
@@ -59,15 +60,14 @@ class _CardsScreenState extends State<CardsScreen> {
           });
           
         }else{
-          print('Error al obtener el pokemon con ID $id: ${response.statusCode}');
+          log('Error al obtener el pokemon con ID $id: ${response.statusCode}');
         }
       } catch (e){
-        print('Error al obtener el pokemon con ID $id: $e');
+        log('Error al obtener el pokemon con ID $id: $e');
       }
 
     }
-
-    print(pokemons.first.name);
+    
     isLoading = false;
     setState(() {
       
@@ -116,6 +116,7 @@ Future loadNextPokemon() async{
               width: 350.0,
               padding: const EdgeInsets.only(left: 80.0, right: 80.0, bottom: 20.0),
               child: Card(
+                color: Theme.of(context).colorScheme.surface,
                 clipBehavior: Clip.hardEdge,
                 elevation: 5,
                 child: InkWell(
