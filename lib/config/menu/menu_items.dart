@@ -22,5 +22,23 @@ class MenuItems {
       link: "/pokemon", 
       icon: Image.asset('assets/image/pikachu.jpg',)),
 
+    MenuItems(
+      title: "Demo pelea", 
+      subtitle: "Demo batalla pokemon", 
+      link: "/batalla", 
+      icon: Image.asset('assets/image/bulbasaur.png',)),
+
+    MenuItems(
+      title: "Licencia", 
+      subtitle: "Licencias app pokemon", 
+      link: "/licencia", 
+      icon: Image.asset('assets/image/charmander.jpg',)),
+
+    MenuItems(
+      title: "Configuracion de color", 
+      subtitle: "Escoge el color de tu preferencia", 
+      link: "/config", 
+      icon: Image.asset('assets/image/caterpi.jpg',)),
+
 
   ];
