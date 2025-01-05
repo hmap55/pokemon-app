@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pokemon_app/presentation/widgets/side_menu.dart';
 
 class Home extends StatelessWidget {
   static const String name = 'home_screen';
@@ -10,7 +11,12 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
 
+    final scafoldKey = GlobalKey<ScaffoldState>();
     return  Scaffold(
+      key: scafoldKey,
+      appBar: AppBar(
+
+      ),
 
       body: Stack(
         children: [        
@@ -42,6 +48,8 @@ class Home extends StatelessWidget {
 
         ]
          ),
+        
+        drawer:  SideMenu(scaffoldKey: scafoldKey)
 
       );
   }
